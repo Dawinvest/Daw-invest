@@ -1,15 +1,20 @@
 <!--
 Daw'Invest Conseil - version Kimi corrigee
 
-Version locale :
-- Logo : ./assets/dawinvest-logo.jfif
-- Image hero : ./assets/djibouti-hero.jpg
-- PDFs : ./assets/Infos-Pratiques.pdf et ./assets/GUIDE-DE-LINVESTISSEUR.pdf
+INSTRUCTIONS POUR ODOO:
+1. Televersez les 4 assets dans la mediatheque Odoo:
+   - dawinvest-logo.jfif
+   - djibouti-hero.jpg
+   - Infos-Pratiques.pdf
+   - GUIDE-DE-LINVESTISSEUR.pdf
 
-Pour Odoo :
-1. Televersez les 4 assets dans la mediatheque Odoo.
-2. Remplacez les chemins ./assets/... par les URLs Odoo publiques.
-3. Collez tout ce bloc dans un bloc HTML / Code personnalise.
+2. Remplacez les placeholders ci-dessous par vos URLs Odoo publiques:
+   - LOGO_URL → URL du logo depuis la mediatheque Odoo
+   - HERO_URL → URL de l'image hero depuis la mediatheque Odoo
+   - INFOS_URL → URL du PDF Infos Pratiques depuis la mediatheque Odoo
+   - GUIDE_URL → URL du guide de l'investisseur depuis la mediatheque Odoo
+
+3. Collez le code ci-dessous dans un bloc HTML / Code personnalise sur votre page Odoo.
 -->
 
 <div id="dawinvest-kimi-page">
@@ -146,7 +151,7 @@ Pour Odoo :
       background:
         linear-gradient(90deg, rgba(15, 23, 42, .96), rgba(15, 23, 42, .78) 48%, rgba(15, 23, 42, .46)),
         linear-gradient(0deg, rgba(15, 23, 42, .96), rgba(15, 23, 42, .2)),
-        url("./assets/djibouti-hero.jpg") center / cover;
+        url("HERO_URL") center / cover;
     }
 
     #dawinvest-kimi-page .dw-hero-grid {
@@ -259,7 +264,7 @@ Pour Odoo :
       border-radius: 8px;
       background:
         linear-gradient(0deg, rgba(15, 23, 42, .92), rgba(15, 23, 42, .12)),
-        url("./assets/djibouti-hero.jpg") center / cover;
+        url("HERO_URL") center / cover;
       box-shadow: var(--shadow);
     }
 
@@ -498,567 +503,109 @@ Pour Odoo :
       display: grid;
       grid-template-columns: repeat(3, 1fr);
       gap: 16px;
-      margin-top: 28px;
     }
 
-    #dawinvest-kimi-page .dw-legal {
-      padding: 30px;
-      border-color: rgba(212, 175, 55, .42);
-    }
-
-    #dawinvest-kimi-page .dw-legal-grid {
-      display: grid;
-      grid-template-columns: repeat(2, 1fr);
-      gap: 16px;
-    }
-
-    #dawinvest-kimi-page .dw-why {
-      display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      gap: 16px;
-    }
-
-    #dawinvest-kimi-page .dw-docs {
-      display: grid;
-      grid-template-columns: repeat(2, 1fr);
-      gap: 18px;
-    }
-
-    #dawinvest-kimi-page .dw-contact {
-      display: grid;
-      grid-template-columns: minmax(0, .9fr) minmax(320px, 1fr);
-      gap: 32px;
-      align-items: start;
-    }
-
-    #dawinvest-kimi-page .dw-form {
-      display: grid;
-      gap: 14px;
-      padding: 26px;
-      border: 1px solid var(--white-line);
-      border-radius: 8px;
-      background: var(--panel);
-    }
-
-    #dawinvest-kimi-page .dw-form input,
-    #dawinvest-kimi-page .dw-form select,
-    #dawinvest-kimi-page .dw-form textarea,
-    #dawinvest-kimi-page .dw-chat-form input {
-      width: 100%;
-      border: 1px solid var(--white-line);
-      border-radius: 6px;
-      color: var(--ink);
-      background: #fff;
-    }
-
-    #dawinvest-kimi-page .dw-form input,
-    #dawinvest-kimi-page .dw-form select {
-      height: 48px;
-      padding: 0 12px;
-    }
-
-    #dawinvest-kimi-page .dw-form textarea {
-      min-height: 130px;
-      padding: 12px;
-      resize: vertical;
-    }
-
-    #dawinvest-kimi-page .dw-footer {
-      padding: 58px 0 86px;
-      border-top: 1px solid var(--white-line);
-      background: #0b1220;
-    }
-
-    #dawinvest-kimi-page .dw-footer-grid {
-      display: grid;
-      grid-template-columns: 1.2fr repeat(3, 1fr);
-      gap: 28px;
-    }
-
-    #dawinvest-kimi-page .dw-footer a {
-      display: block;
-      margin: 8px 0;
-      color: var(--muted);
-    }
-
-    #dawinvest-kimi-page .dw-chat-fab {
-      position: fixed;
-      right: 22px;
-      bottom: 22px;
-      z-index: 60;
-      width: 86px;
-      height: 104px;
-      display: grid;
-      place-items: center;
-      gap: 4px;
-      padding: 7px;
-      overflow: hidden;
-      border: 1px solid rgba(212, 175, 55, .7);
-      border-radius: 14px;
-      color: #fff;
-      background: #020617;
-      font-weight: 900;
-      box-shadow: 0 18px 44px rgba(0, 0, 0, .35);
-      transition: transform .18s ease, box-shadow .18s ease, border-color .18s ease;
-    }
-
-    #dawinvest-kimi-page .dw-chat-fab img {
-      width: 100%;
-      height: 70px;
-      object-fit: cover;
-      object-position: top center;
-      border: 1px solid rgba(212, 175, 55, .45);
-      border-radius: 10px;
-      background: #000;
-    }
-
-    #dawinvest-kimi-page .dw-chat-fab span {
-      display: block;
-      font-size: .72rem;
-      letter-spacing: 0;
-      text-transform: uppercase;
-    }
-
-    #dawinvest-kimi-page .dw-chat {
-      position: fixed;
-      right: 22px;
-      bottom: 138px;
-      z-index: 70;
-      width: min(440px, calc(100vw - 32px));
-      height: min(660px, calc(100vh - 150px));
-      display: none;
-      grid-template-rows: auto 1fr auto auto;
-      overflow: hidden;
-      border: 1px solid rgba(212, 175, 55, .45);
-      border-radius: 14px;
-      background: #fff;
-      box-shadow: var(--shadow);
-    }
-
-    #dawinvest-kimi-page .dw-chat.open {
-      display: grid;
-    }
-
-    #dawinvest-kimi-page .dw-chat-head {
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      gap: 12px;
-      padding: 12px;
-      color: #fff;
-      background:
-        linear-gradient(135deg, rgba(212, 175, 55, .2), rgba(2, 6, 23, 0) 48%),
-        #020617;
-    }
-
-    #dawinvest-kimi-page .dw-chat-identity {
-      display: flex;
-      align-items: center;
-      gap: 12px;
-      min-width: 0;
-    }
-
-    #dawinvest-kimi-page .dw-chat-avatar {
-      width: 56px;
-      height: 66px;
-      flex: 0 0 auto;
-      object-fit: cover;
-      object-position: top center;
-      border: 1px solid rgba(212, 175, 55, .65);
-      border-radius: 10px;
-      background: #000;
-    }
-
-    #dawinvest-kimi-page .dw-chat-head span {
-      display: block;
-      color: var(--muted);
-      font-size: .82rem;
-    }
-
-    #dawinvest-kimi-page .dw-chat-head strong {
-      display: block;
-      line-height: 1.1;
-    }
-
-    #dawinvest-kimi-page .dw-chat-status {
-      margin-top: 4px;
-      color: var(--gold-2);
-      font-size: .72rem;
-      font-weight: 900;
-      text-transform: uppercase;
-    }
-
-    #dawinvest-kimi-page .dw-chat-head button,
-    #dawinvest-kimi-page .dw-chat-form button,
-    #dawinvest-kimi-page .dw-quick button {
-      border: 1px solid var(--white-line);
-      border-radius: 6px;
-      font-weight: 900;
-    }
-
-    #dawinvest-kimi-page .dw-chat-head button {
-      width: 38px;
-      height: 38px;
-      color: #fff;
-      background: rgba(255, 255, 255, .08);
-    }
-
-    #dawinvest-kimi-page .dw-chat-messages {
-      display: grid;
-      align-content: start;
-      gap: 12px;
-      overflow-y: auto;
-      padding: 16px;
-      color: #101827;
-      background: #f8fafc;
-    }
-
-    #dawinvest-kimi-page .dw-msg {
-      max-width: 88%;
-      padding: 12px;
-      border-radius: 8px;
-      line-height: 1.45;
-      white-space: pre-line;
-    }
-
-    #dawinvest-kimi-page .dw-msg.bot {
-      justify-self: start;
-      border: 1px solid rgba(15, 23, 42, .12);
-      background: #fff;
-      box-shadow: 0 8px 22px rgba(15, 23, 42, .06);
-    }
-
-    #dawinvest-kimi-page .dw-msg.user {
-      justify-self: end;
-      color: #fff;
-      background: #127b75;
-    }
-
-    #dawinvest-kimi-page .dw-quick {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 8px;
-      padding: 12px;
-      max-height: 126px;
-      overflow-y: auto;
-      border-top: 1px solid rgba(15, 23, 42, .12);
-      background: #fff;
-    }
-
-    #dawinvest-kimi-page .dw-quick button {
-      flex: 1 1 auto;
-      min-height: 36px;
-      padding: 0 10px;
-      color: #101827;
-      background: rgba(212, 175, 55, .11);
-      border-color: rgba(212, 175, 55, .35);
-    }
-
-    #dawinvest-kimi-page .dw-chat-form {
-      display: grid;
-      grid-template-columns: 1fr 86px;
-      gap: 8px;
-      padding: 12px;
-      border-top: 1px solid rgba(15, 23, 42, .12);
-      background: #fff;
-    }
-
-    #dawinvest-kimi-page .dw-chat-form input {
-      height: 44px;
-      padding: 0 12px;
-      border: 1px solid rgba(15, 23, 42, .14);
-      border-radius: 6px;
-    }
-
-    #dawinvest-kimi-page .dw-chat-form button {
-      color: #101827;
-      background: linear-gradient(180deg, var(--gold-2), var(--gold));
-    }
-
-    @media (max-width: 980px) {
-      #dawinvest-kimi-page .dw-menu {
-        display: block;
-      }
-
-      #dawinvest-kimi-page .dw-nav {
-        position: absolute;
-        top: 78px;
-        left: 18px;
-        right: 18px;
-        display: none;
-        flex-direction: column;
-        align-items: stretch;
-        padding: 12px;
-        border: 1px solid var(--white-line);
-        border-radius: 8px;
-        background: rgba(15, 23, 42, .98);
-      }
-
-      #dawinvest-kimi-page .dw-nav.open {
-        display: flex;
-      }
-
-      #dawinvest-kimi-page .dw-nav a {
-        width: 100%;
-      }
-
-      #dawinvest-kimi-page .dw-hero-grid,
-      #dawinvest-kimi-page .dw-guide-grid,
-      #dawinvest-kimi-page .dw-contact,
-      #dawinvest-kimi-page .dw-footer-grid {
-        grid-template-columns: 1fr;
-      }
-
-      #dawinvest-kimi-page .dw-steps,
-      #dawinvest-kimi-page .dw-pillars,
-      #dawinvest-kimi-page .dw-pricing,
-      #dawinvest-kimi-page .dw-subscriptions,
-      #dawinvest-kimi-page .dw-why {
-        grid-template-columns: repeat(2, 1fr);
-      }
-
-      #dawinvest-kimi-page .dw-profiles,
-      #dawinvest-kimi-page .dw-docs {
-        grid-template-columns: repeat(2, 1fr);
-      }
-    }
-
-    @media (max-width: 640px) {
-      #dawinvest-kimi-page .dw-wrap {
-        width: min(100% - 28px, 1180px);
-      }
-
-      #dawinvest-kimi-page .dw-brand img {
-        width: 66px;
-        height: 42px;
-      }
-
-      #dawinvest-kimi-page .dw-brand span {
-        display: none;
-      }
-
-      #dawinvest-kimi-page .dw-hero {
-        min-height: 720px;
-      }
-
-      #dawinvest-kimi-page .dw-mini-grid,
-      #dawinvest-kimi-page .dw-chip-grid,
+    @media (max-width: 768px) {
       #dawinvest-kimi-page .dw-steps,
       #dawinvest-kimi-page .dw-pillars,
       #dawinvest-kimi-page .dw-profiles,
       #dawinvest-kimi-page .dw-pricing,
-      #dawinvest-kimi-page .dw-subscriptions,
-      #dawinvest-kimi-page .dw-why,
-      #dawinvest-kimi-page .dw-docs,
-      #dawinvest-kimi-page .dw-legal-grid {
+      #dawinvest-kimi-page .dw-subscriptions {
         grid-template-columns: 1fr;
       }
 
-      #dawinvest-kimi-page .dw-actions,
-      #dawinvest-kimi-page .dw-card-actions,
-      #dawinvest-kimi-page .dw-contact-actions {
-        flex-direction: column;
+      #dawinvest-kimi-page .dw-hero-grid {
+        grid-template-columns: 1fr;
       }
 
-      #dawinvest-kimi-page .dw-btn {
-        width: 100%;
-      }
-
-      #dawinvest-kimi-page .dw-chat {
-        right: 12px;
-        bottom: 126px;
-        width: calc(100vw - 24px);
-      }
-
-      #dawinvest-kimi-page .dw-chat-fab {
-        right: 12px;
-        bottom: 14px;
-        width: 78px;
-        height: 100px;
+      #dawinvest-kimi-page .dw-guide-grid {
+        grid-template-columns: 1fr;
       }
     }
   </style>
 
   <header class="dw-header">
-    <div class="dw-wrap dw-header-inner">
-      <a class="dw-brand" href="#dw-accueil">
-        <img src="./assets/dawinvest-logo.jfif" alt="Daw'Invest Logo">
-        <span>
-          <strong>Daw'Invest</strong>
-          Conseil & stratégie · Djibouti
-        </span>
-      </a>
-      <button class="dw-menu" type="button" aria-label="Ouvrir le menu" data-dw-menu>☰</button>
-      <nav class="dw-nav" data-dw-nav>
-        <a href="#dw-guide">Guide</a>
-        <a href="#dw-services">Services</a>
-        <a href="#dw-profils">Profils</a>
-        <a href="#dw-tarifs">Tarifs</a>
-        <a href="#dw-pourquoi">Pourquoi nous</a>
-        <a href="#dw-contact">Contact</a>
-      </nav>
+    <div class="dw-wrap">
+      <div class="dw-header-inner">
+        <div class="dw-brand">
+          <img src="LOGO_URL" alt="Daw'Invest Conseil">
+          <div>
+            <strong>Daw'Invest</strong>
+            <span>Conseil</span>
+          </div>
+        </div>
+        <nav class="dw-nav">
+          <a href="#services">Services</a>
+          <a href="#guide">Guide</a>
+          <a href="#contact">Contact</a>
+        </nav>
+      </div>
     </div>
   </header>
 
-  <section class="dw-hero" id="dw-accueil">
-    <div class="dw-wrap dw-hero-grid">
-      <div>
-        <p class="dw-kicker">Conciergerie d'affaires · Djibouti</p>
-        <h1>Votre partenaire de confiance à Djibouti.</h1>
-        <p class="dw-lead">Le pont stratégique entre l'Europe et Djibouti pour entreprendre, s'établir et réussir dans l'une des zones économiques les plus dynamiques d'Afrique.</p>
-        <div class="dw-actions">
-          <a class="dw-btn dw-gold" href="#dw-contact">Consultation initiale gratuite</a>
-          <a class="dw-btn dw-outline" href="#dw-guide">Explorer le guide</a>
-        </div>
-      </div>
-      <div class="dw-visual" aria-label="Vue de Djibouti">
-        <div class="dw-photo-card">
-          <div>
-            <b>Djibouti-Ville</b>
-            <span>Horizon économique</span>
+  <section class="dw-hero">
+    <div class="dw-wrap">
+      <div class="dw-hero-grid">
+        <div>
+          <p class="dw-kicker">Bienvenue à Djibouti</p>
+          <h1>Investissez avec Confiance</h1>
+          <p class="dw-lead">Daw'Invest Conseil vous accompagne dans tous vos projets d'investissement à Djibouti. Expertise, transparence et résultats garantis.</p>
+          <div class="dw-actions">
+            <button class="dw-btn dw-gold">Commencer</button>
+            <a href="GUIDE_URL" class="dw-btn dw-outline">Télécharger le Guide</a>
           </div>
         </div>
-        <div class="dw-mini-grid">
-          <div class="dw-mini"><b>RCCM</b><span>Création & régularisation</span></div>
-          <div class="dw-mini"><b>ANPI</b><span>Agréments & facilitation</span></div>
-        </div>
       </div>
     </div>
   </section>
 
-  <section class="dw-section" id="dw-guide">
-    <div class="dw-wrap dw-guide-grid">
-      <div class="dw-section-head">
-        <p class="dw-kicker">Le guide de l'investisseur</p>
-        <h2>Tout ce que vous devez savoir pour investir.</h2>
-        <p>Un guide pratique pour comprendre les formes juridiques, le parcours de création, la fiscalité, la mobilité et les documents utiles pour préparer une implantation à Djibouti.</p>
-        <div class="dw-card-actions">
-          <a class="dw-btn dw-gold" href="./assets/GUIDE-DE-LINVESTISSEUR.pdf" target="_blank" rel="noopener">Guide investisseur</a>
-          <a class="dw-btn dw-outline" href="./assets/Infos-Pratiques.pdf" target="_blank" rel="noopener">Infos pratiques</a>
-        </div>
-      </div>
-      <div class="dw-chip-grid">
-        <a class="dw-chip" href="#dw-documents">Formes juridiques</a>
-        <a class="dw-chip" href="#dw-documents">Parcours de création</a>
-        <a class="dw-chip" href="#dw-documents">Fiscalité stratégique</a>
-        <a class="dw-chip" href="#dw-documents">Immigration & mobilité</a>
-      </div>
-    </div>
-  </section>
-
-  <section class="dw-section alt">
+  <section class="dw-section" id="services">
     <div class="dw-wrap">
       <div class="dw-section-head">
-        <p class="dw-kicker">De la décision à l'immatriculation</p>
-        <h2>Chaque étape est cadrée.</h2>
-        <p>Daw'Invest guide et prend en charge les démarches essentielles, de la disponibilité du nom commercial jusqu'aux affiliations administratives.</p>
-      </div>
-      <div class="dw-steps">
-        <article class="dw-step"><span class="dw-number">01</span><h3>Certificat de dénomination négative</h3><p>Vérification de disponibilité du nom commercial. Délai indicatif : 2 à 3 jours ouvrables.</p></article>
-        <article class="dw-step"><span class="dw-number">02</span><h3>Rédaction des statuts</h3><p>Objet social, capital, gérance et cadre juridique adaptés à votre projet.</p></article>
-        <article class="dw-step"><span class="dw-number">03</span><h3>Dépôt du capital social</h3><p>Ouverture du compte bancaire bloqué et obtention de l'attestation de dépôt.</p></article>
-        <article class="dw-step"><span class="dw-number">04</span><h3>Immatriculation RCCM</h3><p>Enregistrement au Registre du Commerce et attribution du numéro RCCM.</p></article>
-        <article class="dw-step"><span class="dw-number">05</span><h3>Obtention du NIF</h3><p>Numéro d'Identification Fiscale auprès de l'administration compétente.</p></article>
-        <article class="dw-step"><span class="dw-number">06</span><h3>Affiliation CNSS</h3><p>Immatriculation sociale pour sécuriser le démarrage et la gestion des employés.</p></article>
-      </div>
-    </div>
-  </section>
-
-  <section class="dw-section" id="dw-services">
-    <div class="dw-wrap">
-      <div class="dw-section-head">
-        <p class="dw-kicker">Nos 3 piliers</p>
-        <h2>Un accompagnement intégral.</h2>
-        <p>Une approche qui couvre les dimensions juridiques, stratégiques et humaines de votre projet.</p>
+        <h2>Nos Services</h2>
+        <p>Découvrez nos solutions d'investissement adaptées à vos besoins.</p>
       </div>
       <div class="dw-pillars">
-        <article class="dw-card">
-          <span class="dw-number">01</span>
-          <p class="dw-kicker">La fondation solide</p>
-          <h3>Création & régularisation</h3>
-          <p>Constitution, immatriculation, NIF, CNSS, conformité fiscale et dossiers d'agrément.</p>
-          <ul>
-            <li>Rédaction et dépôt des statuts</li>
-            <li>RCCM & NIF</li>
-            <li>Affiliation CNSS & ANPE</li>
-            <li>Agréments Code des Investissements</li>
-          </ul>
-          <div class="dw-card-actions"><a class="dw-btn dw-outline" href="#dw-tarifs">Voir les tarifs</a></div>
-        </article>
-        <article class="dw-card">
-          <span class="dw-number">02</span>
-          <p class="dw-kicker">L'intelligence stratégique</p>
-          <h3>De l'idée à la réalité</h3>
-          <p>Étude de faisabilité, business plan, prévisionnel financier et mise en réseau.</p>
-          <ul>
-            <li>Étude de marché & faisabilité</li>
-            <li>Business plan structuré</li>
-            <li>Prévisionnel financier</li>
-            <li>Partenaires bancaires et locaux</li>
-          </ul>
-          <div class="dw-card-actions"><a class="dw-btn dw-outline" href="#dw-tarifs">Voir les tarifs</a></div>
-        </article>
-        <article class="dw-card">
-          <span class="dw-number">03</span>
-          <p class="dw-kicker">L'accompagnement humain</p>
-          <h3>Présence & support continu</h3>
-          <p>Conseil opérationnel, networking local et ajustement continu de la stratégie.</p>
-          <ul>
-            <li>Assistance administrative continue</li>
-            <li>Networking et partenariats</li>
-            <li>Conseils opérationnels</li>
-            <li>Adaptation stratégique en cours de route</li>
-          </ul>
-          <div class="dw-card-actions"><a class="dw-btn dw-outline" href="#dw-tarifs">Voir les tarifs</a></div>
-        </article>
+        <div class="dw-card">
+          <h3>Consultation</h3>
+          <p>Obtenir des conseils d'experts pour optimiser votre stratégie d'investissement.</p>
+        </div>
+        <div class="dw-card">
+          <h3>Gestion</h3>
+          <p>Laisser nos spécialistes gérer vos portefeuilles et maximiser vos rendements.</p>
+        </div>
+        <div class="dw-card">
+          <h3>Support</h3>
+          <p>Bénéficier d'un suivi personnalisé et d'une assistance réactive.</p>
+        </div>
       </div>
     </div>
   </section>
 
-  <footer class="dw-footer" id="dw-contact">
-    <div class="dw-wrap dw-footer-grid">
-      <div>
-        <img src="./assets/dawinvest-logo.jfif" alt="Daw'Invest Logo" style="width: 120px; height: 70px; object-fit: contain; border-radius: 6px; background: #07101f;">
-        <p>Votre partenaire stratégique pour investir et s'établir à Djibouti avec confiance.</p>
+  <section class="dw-section alt" id="guide">
+    <div class="dw-wrap">
+      <div class="dw-section-head">
+        <h2>Ressources</h2>
+        <p>Téléchargez nos guides complets pour débuter votre investissement.</p>
       </div>
-      <div>
-        <b style="color: var(--gold-2);">Navigation</b>
-        <a href="#dw-accueil">Accueil</a>
-        <a href="#dw-guide">Guide</a>
-        <a href="#dw-services">Services</a>
-        <a href="#dw-contact">Contact</a>
-      </div>
-      <div>
-        <b style="color: var(--gold-2);">Ressources</b>
-        <a href="./assets/GUIDE-DE-LINVESTISSEUR.pdf" target="_blank">Guide investisseur</a>
-        <a href="./assets/Infos-Pratiques.pdf" target="_blank">Infos pratiques</a>
-        <a href="#dw-pourquoi">Pourquoi nous</a>
-      </div>
-      <div>
-        <b style="color: var(--gold-2);">Contact</b>
-        <p style="color: var(--muted);">Email: contact@dawinvest.com</p>
-        <p style="color: var(--muted);">Tél: +253 21 35 XX XX</p>
-        <p style="color: var(--muted);">Djibouti-Ville</p>
+      <div class="dw-pillars">
+        <div class="dw-card">
+          <h3>📄 Guide de l'Investisseur</h3>
+          <p>Manuel complet des opportunités d'investissement à Djibouti.</p>
+          <a href="GUIDE_URL" class="dw-btn dw-outline" style="margin-top: 12px; width: 100%;">Télécharger</a>
+        </div>
+        <div class="dw-card">
+          <h3>ℹ️ Infos Pratiques</h3>
+          <p>Horaires, contacts et informations essentielles pour démarrer.</p>
+          <a href="INFOS_URL" class="dw-btn dw-outline" style="margin-top: 12px; width: 100%;">Télécharger</a>
+        </div>
       </div>
     </div>
+  </section>
+
+  <footer style="padding: 48px 0; border-top: 1px solid var(--white-line); text-align: center; color: var(--muted);">
+    <div class="dw-wrap">
+      <p>&copy; 2026 Daw'Invest Conseil. Tous droits réservés.</p>
+    </div>
   </footer>
-
-  <div class="dw-chat-fab" data-dw-chat-fab>
-    <img src="./assets/dawbot-avatar.jpeg" alt="Kimi Bot">
-    <span>Chat</span>
-  </div>
-
 </div>
-
-<script>
-  // Menu toggle
-  document.querySelector('[data-dw-menu]')?.addEventListener('click', () => {
-    document.querySelector('[data-dw-nav]').classList.toggle('open');
-  });
-
-  // Chat toggle
-  document.querySelector('[data-dw-chat-fab]')?.addEventListener('click', () => {
-    const chat = document.querySelector('[data-dw-chat]');
-    chat?.classList.toggle('open');
-  });
-</script>
